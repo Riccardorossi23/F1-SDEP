@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" >
+  <title>Admin - Gestione Biglietti</title>
+   <link rel="stylesheet" href="/style/style.css">
+  <script src="script/script.js"></script>
+  </head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="foto/f1-new.png" alt="StemmaF1">
+                </div>
+                <button class="hamburger" id="menu-toggle-btn">
+                    <i class="fas fa-bars">&#9776;</i>
+                </button>
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scuderia.html">Scuderia</a></li>
+                    <li><a href="piloti.html">Piloti</a></li>
+                    <li><a href="calendario.html">calendario</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="classifiche.html">Classifiche</a></li>
+                    <li><a href="login.html">biglietti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Area Admin – Benvenuto <span id="adminName"></span></h1>
+      <button onclick="adminLogout()">Logout</button>
+    </div>
+
+    <div id="messageContainer"></div>
+
+    <section>
+      <h2>🎫 Biglietti Disponibili</h2>
+      <div id="adminTicketsContainer"></div>
+    </section>
+  </div>
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <p id="deleteMessage"></p>
+      <div class="modal-actions">
+        <button class="modal-btn confirm" onclick="confermaEliminazione()">Conferma</button>
+        <button class="modal-btn cancel" onclick="annullaEliminazione()">Annulla</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.formula1.com" target="_blank" title="Formula 1 Ufficiale">
+                <i class="fa-solid fa-flag-checkered"></i> F1
+            </a>
+            <a href="https://www.instagram.com/f1" target="_blank" title="Instagram Formula 1">
+                <img src="foto/Instagram_icon.png" alt="logo Instagram">
+            </a>
+            <a href="https://www.x.com/f1" target="_blank" title="X Formula 1">
+                <img src="foto/logo_X.jpg" alt="logo X">
+            </a>
+        </div>
+        <p class="copyright">&copy; 2025 Formula 1 Storia. Tutti i diritti riservati.</p>
+    </div>
+</footer>
+</body>
+</html>

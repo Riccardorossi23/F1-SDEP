@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGLIETTI Formula 1</title>
+     <link rel="stylesheet" href="/style/style.css">
+    <script src="script/script.js"></script>
+ </head>
+ <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><img src="foto/f1-new.png" alt="StemmaF1">
+                </div>
+                <button class="hamburger" id="menu-toggle-btn">
+                    <i class="fas fa-bars">&#9776;</i>
+                </button>
+                <ul class="menu" id="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scuderia.html">Scuderia</a></li>
+                    <li><a href="piloti.html">Piloti</a></li>
+                    <li><a href="calendario.html">calendario</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="classifiche.html">Classifiche</a></li>
+                    <li><a href="login.html">biglietti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <div class="header">
+         <div class="logo">🏎️ F1 TICKETS</div>
+         <div class="user-info">
+             <span>Benvenuto, <span id="userName">Utente</span>!</span>
+             <button class="logout-btn" onclick="logout()">Logout</button>
+         </div>
+     </div>
+ 
+     <div class="container">
+         <div class="section">
+             <h2>🏁 Seleziona il Circuito</h2>
+             <div id="circuitsContainer" class="loading">
+                 Caricamento circuiti...
+             </div>
+         </div>
+ 
+         <div class="section">
+             <div id="ticketsContainer" class="tickets-container">
+                 <h2>🎫 BigliettiF1 Disponibili</h2>
+                 <div id="ticketsGrid" class="tickets-grid"></div>
+             </div>
+         </div>
+ 
+         <div id="messageContainer"></div>
+     </div>
+ 
+     <!-- Modal Pagamento -->
+     <div id="paymentModal" class="payment-modal">
+         <div class="modal-content">
+             <div class="modal-header">💳 Conferma Acquisto</div>
+             <div id="purchaseDetails"></div>
+             <form id="paymentForm">
+                 <div class="form-group">
+                     <label for="cardNumber">Numero Carta (9 cifre):</label>
+                     <input type="text" id="cardNumber" pattern="[0-9]{9}" maxlength="9" required>
+                 </div>
+                 <div class="modal-buttons">
+                     <button type="button" class="cancel-btn" onclick="closeModal()">Annulla</button>
+                     <button type="submit" class="confirm-btn">Conferma Acquisto</button>
+                 </div>
+             </form>
+         </div>
+     </div>
+     <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.formula1.com" target="_blank" title="Formula 1 Ufficiale">
+                    <i class="fa-solid fa-flag-checkered"></i> F1
+                </a>
+                <a href="https://www.instagram.com/f1" target="_blank" title="Instagram Formula 1">
+                    <img src="foto/Instagram_icon.png" alt="logo Instagram">
+                </a>
+                <a href="https://www.x.com/f1" target="_blank" title="X Formula 1">
+                    <img src="foto/logo_X.jpg" alt="logo X">
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 Formula 1 Storia. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+ </body>
+ </html>
